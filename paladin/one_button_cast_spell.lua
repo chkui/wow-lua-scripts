@@ -19,15 +19,17 @@ function UnitHealthMax(_target)
     return 10000
 end
 
-function TargetUnit() end
+function TargetUnit()
+end
 
-function TargetLastEnemy() end
+function TargetLastEnemy()
+end
 
 -- script
--- copy to UI Frame begin with /script
-local _a_spell, _p_spell, _s, _t = { "1", "2", "3" }, { "1", "2", "3" }, "player", "target"
+-- 复制到宏中并加上/script开头
+local _a_spell, _p_spell, _s, _t = { "1", "2", "3" }, { "1", "2", "3" }, "player", "target";
 
-if UnitHealth(_s) / UnitHealthMax(_s) < 0.2
+if (UnitHealth(_s) / UnitHealthMax(_s)) < 0.2
 then
     TargetUnit(_s)
     for k, v in ipairs(_p_spell)
